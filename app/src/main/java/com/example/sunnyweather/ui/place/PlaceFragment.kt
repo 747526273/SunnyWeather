@@ -1,7 +1,9 @@
 package com.example.sunnyweather.ui.place
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
@@ -20,12 +22,26 @@ import com.hi.dhl.binding.viewbind
  *@email 747526273@qq.com
  */
 class PlaceFragment:Fragment(R.layout.fragment_place) {
-    val binding:FragmentPlaceBinding by viewbind()
+    private var _binding:FragmentPlaceBinding?=null
+    private val binding get() = _binding!!
     private lateinit var adapter: PlaceAdapter
     val viewModel by lazy { ViewModelProvider(this).get(PlaceViewModel::class.java) }
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentPlaceBinding.inflate(inflater,container,false)
+        return binding.root
+    }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         initData()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     private fun initData() {

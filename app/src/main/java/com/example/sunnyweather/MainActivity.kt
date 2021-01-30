@@ -9,6 +9,6 @@ class MainActivity : AppCompatActivity() {
     private val binding:ActivityMainBinding by viewbind()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main)
     }
 }

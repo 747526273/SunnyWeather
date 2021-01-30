@@ -14,6 +14,8 @@ import retrofit2.http.Query
  *@email 747526273@qq.com
  */
 interface PlaceService {
-    @GET("v2.5/place?token=${SunnyWeatherApplication.TOKEN}&lang=zh_CN")
+    @GET("v2/place?token=${SunnyWeatherApplication.TOKEN}&lang=zh_CN")
     fun searchPlaces(@Query("query")query:String):Call<PlaceResponse>
+
+
 }

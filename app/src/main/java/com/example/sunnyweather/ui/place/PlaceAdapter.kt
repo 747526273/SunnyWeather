@@ -23,7 +23,7 @@ class PlaceAdapter(private val fragment: Fragment, private val placeList: List<P
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = PlaceItemBinding.inflate(
-            LayoutInflater.from(SunnyWeatherApplication.context),
+            LayoutInflater.from(fragment.context),
             parent,
             false
         )
