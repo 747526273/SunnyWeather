@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">SunnyWeather</string>
+    <string name="now_skyAndAQI">|</string>
+    <string name="now_prediction_name">预报</string>
+    <string name="life_index_name">生活指数</string>
+    <string name="life_index_cold">感冒</string>
+    <string name="life_index_dressing">穿衣</string>
+    <string name="life_index_ultraviolet">实时紫外线</string>
+    <string name="life_index_carWashing">洗车</string>
 </resources>
